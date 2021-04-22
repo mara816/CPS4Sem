@@ -1,0 +1,20 @@
+
+Z
+java:S1197G"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8³ƒº‚/
+\
+java:S1854H":Remove this useless assignment to local variable "server".(ûñ¦šûÿÿÿÿ8³ƒº‚/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(©¯–Ş8³ƒº‚/
+[
+java:S3400D"9Remove this method and declare a constant for this value.(»Ù¦şıÿÿÿÿ8Õ¨‹œ‚/
+M
+java:S1481H"+Remove this unused "server" local variable.(ûñ¦šûÿÿÿÿ8³ƒº‚/
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(×öº¸úÿÿÿÿ8†¿‚œ‚/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ØĞÓµúÿÿÿÿ8³ƒº‚/
+f
+java:S2259,"DA "NullPointerException" could be thrown; "socket" is nullable here.(Ûæ•øûÿÿÿÿ8çÚœ°„/
+y
+java:S1488?"\Immediately return this expression instead of assigning it to the temporary variable "temp".(¨¬’µ8õ‚/
+c
+java:S2142<"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8›‚œ‚/
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8Ö½÷›‚/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(µ¿ç‚8³ƒº‚/

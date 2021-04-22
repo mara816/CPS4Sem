@@ -1,0 +1,5 @@
+domain/ISensor.class
+domain/TempController.class
+domain/CO2Controller.class
+presentation/Client.class
+presentation/App.class

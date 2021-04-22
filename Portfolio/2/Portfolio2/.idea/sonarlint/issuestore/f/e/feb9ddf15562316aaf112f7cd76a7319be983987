@@ -1,0 +1,20 @@
+
+Z
+java:S1197K"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8ä½Ğ‘‚/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ØĞÓµúÿÿÿÿ8¿½º‚/
+c
+java:S2142?"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ë€®‚/
+_
+java:S1854L"=Remove this useless assignment to local variable "co2Server".(Æ´ƒµÿÿÿÿÿ8û²Ñ‘‚/
+P
+java:S1481L".Remove this unused "co2Server" local variable.(Æ´ƒµÿÿÿÿÿ8û²Ñ‘‚/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ŠÛãşÿÿÿÿ
+}
+java:S1488B"[Immediately return this expression instead of assigning it to the temporary variable "co2".(ú…Üîûÿÿÿÿ8“É‚/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(µ¿ç‚8¿½º‚/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(©¯–Ş8¿½º‚/
+f
+java:S2259."DA "NullPointerException" could be thrown; "socket" is nullable here.(Ûæ•øûÿÿÿÿ8Ó®š°„/
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8¿½º‚/
+U	java:S106="9Replace this use of System.out or System.err by a logger.(¨‰ÄÓ8©¿®‚/
+X	java:S125"<This block of commented-out lines of code should be removed.(¯É¦„8²¶É®„/

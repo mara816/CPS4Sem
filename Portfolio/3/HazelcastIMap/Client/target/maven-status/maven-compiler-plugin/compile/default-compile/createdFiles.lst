@@ -1,0 +1,4 @@
+presentation/Main.class
+domain/ISensor.class
+domain/CO2Observer.class
+domain/TemperatureObserver.class

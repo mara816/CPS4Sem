@@ -1,12 +1,14 @@
 package temp;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TempServer {
 
-    TemperatureSensor temperatureSensor = new TemperatureSensor();
+    private TemperatureSensor temperatureSensor = new TemperatureSensor();
     //initialize socket and input stream
     private Socket socket = null;
     private ServerSocket server = null;
@@ -17,7 +19,6 @@ public class TempServer {
     public TempServer(int port) {
         // starts server and waits for a connection
         try {
-
             server = new ServerSocket(port);
             System.out.println("Server started");
 
@@ -26,15 +27,12 @@ public class TempServer {
             socket = server.accept();
             System.out.println("Client accepted");
 
-
             printWriter = new PrintWriter(socket.getOutputStream());
             printWriter.println(getName() + "@" + getValue());
             printWriter.flush();
-            in = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 
             while (socket != null) {
                 socket = server.accept();
-                in = new DataInputStream(socket.getInputStream());
                 printWriter = new PrintWriter(socket.getOutputStream());
                 printWriter.println(getName() + "@" + getValue());
                 printWriter.flush();
@@ -42,14 +40,12 @@ public class TempServer {
 
             // close connection
             socket.close();
-            in.close();
             printWriter.close();
 
         } catch (IOException i) {
             System.out.println(i);
         }
     }
-
 
     public Double getValue() {
         temperatureSensor.start();
@@ -65,7 +61,7 @@ public class TempServer {
     }
 
     public String getName() {
-        return "Temperature: ";
+        return "Temperature";
     }
 
     public static void main(String args[]) {

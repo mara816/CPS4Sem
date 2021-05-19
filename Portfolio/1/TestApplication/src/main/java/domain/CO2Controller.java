@@ -4,7 +4,7 @@ import dk.sdu.mmmi.st4.scfs.sensors.CO2Sensor;
 
 public class CO2Controller implements ISensor {
 
-    CO2Sensor c = new CO2Sensor("CO2: ");
+    CO2Sensor c = new CO2Sensor("CO2");
 
     public CO2Controller() {
     }

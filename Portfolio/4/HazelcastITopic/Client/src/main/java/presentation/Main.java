@@ -4,18 +4,17 @@ import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.topic.ITopic;
 import com.hazelcast.topic.MessageListener;
-import domain.CO2Observer;
+import domain.CO2Subscriber;
 import domain.ISensor;
-import domain.TemperatureObserver;
+import domain.TempSubscriber;
 
 import java.util.Scanner;
 
 public class Main {
     private static final String TOP_NAME = "top";
     private static final String TOP_NAME1 = "top1";
-
-    ISensor temperatureObserver = new TemperatureObserver();
-    ISensor co2Observer = new CO2Observer();
+    private static final ISensor tempSubscriber = new TempSubscriber();
+    private static final ISensor co2Subscriber = new CO2Subscriber();
 
     public Main() {
 
@@ -26,11 +25,10 @@ public class Main {
         ITopic<Object> topic = hz.getTopic(TOP_NAME);
         ITopic<Object> topic1 = hz.getTopic(TOP_NAME1);
 
-        topic.addMessageListener((MessageListener) co2Observer);
-        topic1.addMessageListener((MessageListener) temperatureObserver);
+        topic.addMessageListener((MessageListener) tempSubscriber);
+        topic1.addMessageListener((MessageListener) co2Subscriber);
 
         System.out.println("Welcome");
-        System.out.println("Press 0 to exit");
         System.out.println("Retrieving sensor data...");
 
         for (int i = 0; i < 50; i++) {
@@ -39,8 +37,8 @@ public class Main {
                 Thread.sleep(2000);
 
                 System.out.println("\n" + "Dataset " + (i + 1) + " out of 50");
-                System.out.println(temperatureObserver.getName() + temperatureObserver.getValue());
-                System.out.println(co2Observer.getName() + co2Observer.getValue());
+                System.out.println(tempSubscriber.getName() + ": " + tempSubscriber.getValue());
+                System.out.println(co2Subscriber.getName() + ": " + co2Subscriber.getValue());
 
             } catch (InterruptedException e) {
                 e.printStackTrace();

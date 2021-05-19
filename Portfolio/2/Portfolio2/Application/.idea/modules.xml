@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Application.iml" filepath="$PROJECT_DIR$/Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CO2Sensor/CO2Sensor.iml" filepath="$PROJECT_DIR$/../CO2Sensor/CO2Sensor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TempSensor/TempSensor.iml" filepath="$PROJECT_DIR$/../TempSensor/TempSensor.iml" />
+    </modules>
+  </component>
+</project>

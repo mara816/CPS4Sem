@@ -1,33 +1,26 @@
 package domain;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
 
 public class TempController implements ISensor {
 
     private Socket socket = null;
-    //private InputStreamReader input = null;
-    private DataInputStream input = null;
-    //private DataOutputStream out = null;
     private PrintWriter printWriter = null;
-
     private String name;
     private Double value;
 
     public TempController() {
-    }
-
-    public void getReading() {
-
         // establish a connection
         try {
             socket = new Socket("localhost", 5000);
-            System.out.println("Connected to Temperature server");
 
             // sends output to the socket
             printWriter = new PrintWriter(socket.getOutputStream());
             printWriter.write("hello");
-            input = new DataInputStream(socket.getInputStream());
 
             InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream());
 
@@ -38,10 +31,7 @@ public class TempController implements ISensor {
             name = arr[0];
             value = Double.valueOf(arr[1]);
 
-
             // close the connection
-            input.close();
-            //out.close();
             socket.close();
             printWriter.close();
 

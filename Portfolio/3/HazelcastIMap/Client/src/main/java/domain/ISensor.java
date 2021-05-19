@@ -1,7 +1,6 @@
 package domain;
 
 /**
- *
  * @author Anders
  */
 public interface ISensor {

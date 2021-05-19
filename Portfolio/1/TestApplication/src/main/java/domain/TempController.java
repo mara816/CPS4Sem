@@ -11,7 +11,7 @@ public class TempController implements ISensor {
 
     @Override
     public String getName() {
-        String name = "Temperature: ";
+        String name = "Temperature";
         return name;
     }
 

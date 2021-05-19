@@ -1,32 +1,27 @@
 package domain;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
 
 public class CO2Controller implements ISensor {
 
     private Socket socket = null;
-    private DataInputStream input = null;
     private PrintWriter printWriter = null;
-
     private String name;
     private Double value;
 
-
     public CO2Controller() {
-    }
-
-    public void getReading() {
 
         // establish a connection
         try {
             socket = new Socket("localhost", 5001);
-            System.out.println("Connected to CO2 server");
 
             // sends output to the socket
             printWriter = new PrintWriter(socket.getOutputStream());
             printWriter.write("hello");
-            input = new DataInputStream(socket.getInputStream());
 
             InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream());
 
@@ -38,7 +33,6 @@ public class CO2Controller implements ISensor {
             value = Double.valueOf(arr[1]);
 
             // close the connection
-            input.close();
             socket.close();
             printWriter.close();
 
